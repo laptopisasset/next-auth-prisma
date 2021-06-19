@@ -10,7 +10,10 @@ const IndexPage = () => {
       </Head>
       <nav>
         {!session ? (
-          <button onClick={() => signIn("github")}>Github Connect</button>
+          <>
+            <button onClick={() => signIn("github")}>Github Signin</button>
+            <button onClick={() => signIn("google")}>Google Signin</button>
+          </>
         ) : (
           <>
             <span>{session.user.name}</span>
